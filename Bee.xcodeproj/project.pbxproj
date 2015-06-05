@@ -8,11 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		E70FFDE71B2214AA00384F67 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70FFDE61B2214AA00384F67 /* AppDelegate.swift */; };
-		E70FFDE91B2214AA00384F67 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70FFDE81B2214AA00384F67 /* ViewController.swift */; };
+		E70FFDE91B2214AA00384F67 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70FFDE81B2214AA00384F67 /* GameViewController.swift */; };
 		E70FFDEC1B2214AA00384F67 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E70FFDEA1B2214AA00384F67 /* Main.storyboard */; };
 		E70FFDEE1B2214AA00384F67 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E70FFDED1B2214AA00384F67 /* Images.xcassets */; };
 		E70FFDF11B2214AA00384F67 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E70FFDEF1B2214AA00384F67 /* LaunchScreen.xib */; };
 		E70FFDFD1B2214AA00384F67 /* BeeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70FFDFC1B2214AA00384F67 /* BeeTests.swift */; };
+		E70FFE071B221ECD00384F67 /* Puzzle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70FFE061B221ECD00384F67 /* Puzzle.swift */; };
+		E70FFE091B2225C300384F67 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70FFE081B2225C300384F67 /* Game.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +31,15 @@
 		E70FFDE11B2214AA00384F67 /* Bee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E70FFDE51B2214AA00384F67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E70FFDE61B2214AA00384F67 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E70FFDE81B2214AA00384F67 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E70FFDE81B2214AA00384F67 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		E70FFDEB1B2214AA00384F67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E70FFDED1B2214AA00384F67 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E70FFDF01B2214AA00384F67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		E70FFDF61B2214AA00384F67 /* BeeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E70FFDFB1B2214AA00384F67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E70FFDFC1B2214AA00384F67 /* BeeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeeTests.swift; sourceTree = "<group>"; };
+		E70FFE061B221ECD00384F67 /* Puzzle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Puzzle.swift; sourceTree = "<group>"; };
+		E70FFE081B2225C300384F67 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,11 +82,13 @@
 			isa = PBXGroup;
 			children = (
 				E70FFDE61B2214AA00384F67 /* AppDelegate.swift */,
-				E70FFDE81B2214AA00384F67 /* ViewController.swift */,
+				E70FFDE81B2214AA00384F67 /* GameViewController.swift */,
 				E70FFDEA1B2214AA00384F67 /* Main.storyboard */,
 				E70FFDED1B2214AA00384F67 /* Images.xcassets */,
 				E70FFDEF1B2214AA00384F67 /* LaunchScreen.xib */,
 				E70FFDE41B2214AA00384F67 /* Supporting Files */,
+				E70FFE061B221ECD00384F67 /* Puzzle.swift */,
+				E70FFE081B2225C300384F67 /* Game.swift */,
 			);
 			path = Bee;
 			sourceTree = "<group>";
@@ -156,6 +162,7 @@
 		E70FFDD91B2214AA00384F67 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = "";
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = MojoTech;
 				TargetAttributes = {
@@ -212,8 +219,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E70FFDE91B2214AA00384F67 /* ViewController.swift in Sources */,
+				E70FFE071B221ECD00384F67 /* Puzzle.swift in Sources */,
+				E70FFDE91B2214AA00384F67 /* GameViewController.swift in Sources */,
 				E70FFDE71B2214AA00384F67 /* AppDelegate.swift in Sources */,
+				E70FFE091B2225C300384F67 /* Game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
