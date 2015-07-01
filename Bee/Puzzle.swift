@@ -7,42 +7,36 @@
 //
 
 
-struct Puzzle {
+class Puzzle {
     let requiredLetter :String
     let optionalLetters :[String]
+    let validWords :[String]
     
-    let validWords :Set<String>
+    init(requiredLetter: String, optionalLetters: [String], validWords: [String]) {
+        self.requiredLetter = requiredLetter
+        self.optionalLetters = optionalLetters
+        self.validWords = validWords
+    }
     
-    let goodThreshold :Int
-    let excellentThreshold :Int
-    let geniusThreshold :Int
+    class func scoreWord(word: String) -> Int {
+        return count(Array(Set(word))) == 7 ? 3 : 1
+    }
     
-    let possiblePoints :Int
+    class func scoreWords(words: [String]) -> Int {
+        return words.reduce(0, combine: {$0 + scoreWord($1)})
+    }
     
-    func tryWord(word: String) -> Result {
-        // TODO
-        // 1 . are the word's letters contained in [req + opt]
-        // 2 . is this in the dictionary?
-        return validWords.contains(word) ? .Valid(word: word) : .Invalid
+    class func validWordLength(word: String) -> Bool {
+        return count(word) > 4
+    }
+    
+    func validWord(word: String) -> Bool {
+        return contains(self.validWords, word)
+    }
+    
+    func possiblePoints() -> Int {
+        return Puzzle.scoreWords(validWords)
     }
 }
 
-enum Result {
-    case Invalid
-    case Valid(word: String)
-}
-
-struct Session {
-    let puzzle :Puzzle
-    var moves :[String]
-    
-}
-
-extension String {
-    var score :Int {
-        get {
-            return Set(self.componentsSeparatedByString("")).count == 7 ? 3 : 1
-        }
-    }
-}
 

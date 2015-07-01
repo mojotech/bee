@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Rj2-Ca-Kyv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E36b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Rj2-Ca-Kyv">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -28,7 +29,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bee" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lCh-1Y-mgj">
                                 <rect key="frame" x="269" y="36" width="52" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -56,11 +57,162 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ap9-ui-O26">
+                                <rect key="frame" x="171" y="289" width="30" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="1">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="enterLetterButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fi0-w3-cGf"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Answer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hth-fV-MKk">
+                                <rect key="frame" x="16" y="198" width="568" height="108"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="44"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s3b-aT-AEL">
+                                <rect key="frame" x="247" y="289" width="30" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="3">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="enterLetterButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8oE-Ui-td9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nVo-NK-19S">
+                                <rect key="frame" x="323" y="289" width="30" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="4">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="enterLetterButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CFQ-4G-ixL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ozF-hC-QJ9">
+                                <rect key="frame" x="361" y="289" width="30" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="5">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="enterLetterButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fol-vE-eRv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GVY-E5-E2l">
+                                <rect key="frame" x="399" y="289" width="30" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="6">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="enterLetterButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9L0-gc-XjG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3qJ-NA-X3Y">
+                                <rect key="frame" x="209" y="289" width="30" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="2">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="enterLetterButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TpC-oc-H9A"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KNS-R8-UNY">
+                                <rect key="frame" x="285" y="279" width="30" height="55"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <state key="normal" title="0">
+                                    <color key="titleColor" red="1" green="0.78535160661102432" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="enterLetterButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="07V-Dr-ScL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cHw-G9-kGj">
+                                <rect key="frame" x="300" y="342" width="106" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="Backspace"/>
+                                <connections>
+                                    <action selector="backspace:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jLO-6X-Kur"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eaN-fn-3eh">
+                                <rect key="frame" x="194" y="342" width="106" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="submit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="deh-cL-T3G"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fGh-bK-hvk">
+                                <rect key="frame" x="16" y="433" width="568" height="152"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4fG-hc-Kfz">
+                                <rect key="frame" x="226" y="46" width="148" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cHw-G9-kGj" firstAttribute="top" secondItem="KNS-R8-UNY" secondAttribute="bottom" constant="8" id="79f-P7-qty"/>
+                            <constraint firstItem="KNS-R8-UNY" firstAttribute="leading" secondItem="3qJ-NA-X3Y" secondAttribute="trailing" constant="46" id="7QM-r9-D5f"/>
+                            <constraint firstAttribute="centerX" secondItem="KNS-R8-UNY" secondAttribute="centerX" id="84i-Vm-tD0"/>
+                            <constraint firstAttribute="centerY" secondItem="KNS-R8-UNY" secondAttribute="centerY" constant="-7" id="9BK-Ne-Gza"/>
+                            <constraint firstItem="KNS-R8-UNY" firstAttribute="leading" secondItem="Ap9-ui-O26" secondAttribute="trailing" constant="84" id="9is-yz-M6T"/>
+                            <constraint firstItem="Ap9-ui-O26" firstAttribute="centerY" secondItem="KNS-R8-UNY" secondAttribute="centerY" id="Aq7-bu-Qgd"/>
+                            <constraint firstItem="KNS-R8-UNY" firstAttribute="centerY" secondItem="s3b-aT-AEL" secondAttribute="centerY" id="KFU-7a-Oue"/>
+                            <constraint firstItem="GVY-E5-E2l" firstAttribute="leading" secondItem="KNS-R8-UNY" secondAttribute="trailing" constant="84" id="WxD-d0-klz"/>
+                            <constraint firstItem="ozF-hC-QJ9" firstAttribute="centerY" secondItem="KNS-R8-UNY" secondAttribute="centerY" id="Xo2-uA-9cb"/>
+                            <constraint firstAttribute="centerX" secondItem="4fG-hc-Kfz" secondAttribute="centerX" id="Ycj-Yr-jqs"/>
+                            <constraint firstItem="KNS-R8-UNY" firstAttribute="centerY" secondItem="nVo-NK-19S" secondAttribute="centerY" id="YkV-H2-Nvz"/>
+                            <constraint firstItem="cHw-G9-kGj" firstAttribute="leading" secondItem="eaN-fn-3eh" secondAttribute="trailing" id="ZfF-VX-q0F"/>
+                            <constraint firstAttribute="centerX" secondItem="fGh-bK-hvk" secondAttribute="centerX" id="bPM-lH-Lma"/>
+                            <constraint firstAttribute="centerX" secondItem="cHw-G9-kGj" secondAttribute="leading" id="cq0-L0-4hy"/>
+                            <constraint firstItem="KNS-R8-UNY" firstAttribute="top" secondItem="Hth-fV-MKk" secondAttribute="bottom" constant="5" id="gTK-lu-A3i"/>
+                            <constraint firstAttribute="centerX" secondItem="Hth-fV-MKk" secondAttribute="centerX" id="gW6-6R-4Xd"/>
+                            <constraint firstItem="GVY-E5-E2l" firstAttribute="centerY" secondItem="KNS-R8-UNY" secondAttribute="centerY" id="j1d-H6-ayS"/>
+                            <constraint firstItem="ozF-hC-QJ9" firstAttribute="leading" secondItem="KNS-R8-UNY" secondAttribute="trailing" constant="46" id="kuA-FH-3gZ"/>
+                            <constraint firstItem="nVo-NK-19S" firstAttribute="leading" secondItem="KNS-R8-UNY" secondAttribute="trailing" constant="8" id="mXy-Gh-3lJ"/>
+                            <constraint firstItem="eaN-fn-3eh" firstAttribute="top" secondItem="KNS-R8-UNY" secondAttribute="bottom" constant="8" id="r5d-vu-twb"/>
+                            <constraint firstItem="3qJ-NA-X3Y" firstAttribute="centerY" secondItem="KNS-R8-UNY" secondAttribute="centerY" id="rEO-GT-fhP"/>
+                            <constraint firstAttribute="centerX" secondItem="eaN-fn-3eh" secondAttribute="trailing" id="rN3-XL-NvQ"/>
+                            <constraint firstItem="KNS-R8-UNY" firstAttribute="leading" secondItem="s3b-aT-AEL" secondAttribute="trailing" constant="8" id="zeh-y6-SrC"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="currentAnswer" destination="Hth-fV-MKk" id="mxO-JS-yZq"/>
+                        <outlet property="foundAnswerList" destination="fGh-bK-hvk" id="4Ir-ha-hjI"/>
+                        <outlet property="requiredLetterButton" destination="KNS-R8-UNY" id="DQP-yn-Qld"/>
+                        <outlet property="scoreLabel" destination="4fG-hc-Kfz" id="ah6-AT-xiu"/>
+                        <outletCollection property="optionalLetterButtons" destination="Ap9-ui-O26" collectionClass="NSMutableArray" id="v4N-81-JTH"/>
+                        <outletCollection property="optionalLetterButtons" destination="3qJ-NA-X3Y" collectionClass="NSMutableArray" id="a3x-RQ-TBc"/>
+                        <outletCollection property="optionalLetterButtons" destination="s3b-aT-AEL" collectionClass="NSMutableArray" id="3UQ-le-5ju"/>
+                        <outletCollection property="optionalLetterButtons" destination="nVo-NK-19S" collectionClass="NSMutableArray" id="nOZ-Ox-5MA"/>
+                        <outletCollection property="optionalLetterButtons" destination="ozF-hC-QJ9" collectionClass="NSMutableArray" id="LMo-St-epu"/>
+                        <outletCollection property="optionalLetterButtons" destination="GVY-E5-E2l" collectionClass="NSMutableArray" id="0mY-xJ-YFX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="394" y="462"/>
         </scene>
     </scenes>
 </document>
