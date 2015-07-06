@@ -31,7 +31,7 @@ class Puzzle {
     }
     
     func validWord(word: String) -> Bool {
-        return contains(self.validWords, word)
+        return contains(Dictionary, word)
     }
     
     func possiblePoints() -> Int {

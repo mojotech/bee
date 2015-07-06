@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		97D3DF291B4AFBA100FACF7C /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D3DF281B4AFBA100FACF7C /* Dictionary.swift */; };
+		97D3DF2B1B4B061C00FACF7C /* words.txt in Resources */ = {isa = PBXBuildFile; fileRef = 97D3DF2A1B4B061C00FACF7C /* words.txt */; };
 		E70FFDE71B2214AA00384F67 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70FFDE61B2214AA00384F67 /* AppDelegate.swift */; };
 		E70FFDE91B2214AA00384F67 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70FFDE81B2214AA00384F67 /* GameViewController.swift */; };
 		E70FFDEC1B2214AA00384F67 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E70FFDEA1B2214AA00384F67 /* Main.storyboard */; };
@@ -28,6 +30,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		97D3DF281B4AFBA100FACF7C /* Dictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
+		97D3DF2A1B4B061C00FACF7C /* words.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = words.txt; sourceTree = "<group>"; };
 		E70FFDE11B2214AA00384F67 /* Bee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E70FFDE51B2214AA00384F67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E70FFDE61B2214AA00384F67 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +93,8 @@
 				E70FFDE41B2214AA00384F67 /* Supporting Files */,
 				E70FFE061B221ECD00384F67 /* Puzzle.swift */,
 				E70FFE081B2225C300384F67 /* Game.swift */,
+				97D3DF281B4AFBA100FACF7C /* Dictionary.swift */,
+				97D3DF2A1B4B061C00FACF7C /* words.txt */,
 			);
 			path = Bee;
 			sourceTree = "<group>";
@@ -202,6 +208,7 @@
 			files = (
 				E70FFDEC1B2214AA00384F67 /* Main.storyboard in Resources */,
 				E70FFDF11B2214AA00384F67 /* LaunchScreen.xib in Resources */,
+				97D3DF2B1B4B061C00FACF7C /* words.txt in Resources */,
 				E70FFDEE1B2214AA00384F67 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -221,6 +228,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E70FFE071B221ECD00384F67 /* Puzzle.swift in Sources */,
+				97D3DF291B4AFBA100FACF7C /* Dictionary.swift in Sources */,
 				E70FFDE91B2214AA00384F67 /* GameViewController.swift in Sources */,
 				E70FFDE71B2214AA00384F67 /* AppDelegate.swift in Sources */,
 				E70FFE091B2225C300384F67 /* Game.swift in Sources */,
