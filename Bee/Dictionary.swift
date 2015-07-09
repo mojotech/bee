@@ -8,4 +8,31 @@
 
 import Foundation
 
-let Dictionary = Set(split(String(contentsOfFile: NSBundle.mainBundle().pathForResource("words", ofType: "txt")!, encoding: NSUTF8StringEncoding, error: nil)!) {$0 == " "})
+struct WordDictionary {
+    let words :Set<String>
+    init(wordListURL: NSURL) {
+        let string = String(contentsOfURL: wordListURL, encoding: NSUTF8StringEncoding, error: nil)!
+        
+        let scanner = NSScanner(string: string)
+        var scannedString :NSString? = nil
+        var set = Set<String>(minimumCapacity: 142158)
+        
+        while scanner.scanUpToString(" ", intoString: &scannedString) {
+            map(scannedString) { set.insert($0 as String) }
+        }
+        words = set
+    }
+    
+    func containsWord(word: String) -> Bool {
+        return words.contains(word)
+    }
+}
+
+var SharedDictionary :WordDictionary?
+
+class DictionaryProxy :NSObject {
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        SharedDictionary = WordDictionary(wordListURL: NSBundle.mainBundle().URLForResource("words", withExtension: "txt")!)
+    }
+}
