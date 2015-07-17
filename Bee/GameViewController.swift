@@ -16,6 +16,8 @@ class GameViewController: UIViewController {
     
     @IBOutlet var optionalLetterButtons :[UIButton] = []
     @IBOutlet weak var requiredLetterButton: UIButton!
+    @IBOutlet weak var backspaceButton: UIButton!
+    @IBOutlet weak var submitButton: UIButton!
     
     // Pass this in eventually
     let demoPuzzle = Puzzle(
@@ -37,8 +39,20 @@ class GameViewController: UIViewController {
         }
     }
     
+    func styleLetterButton(button :UIButton) {
+        button.layer.cornerRadius = 30
+        button.layer.borderWidth = 1
+        button.layer.borderColor = button.titleColorForState(.Normal)?.CGColor
+        button.backgroundColor = .whiteColor()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        optionalLetterButtons.map(styleLetterButton)
+        styleLetterButton(requiredLetterButton)
+        styleLetterButton(backspaceButton)
+        styleLetterButton(submitButton)
                 
         map(zip(optionalLetterButtons, demoPuzzle.optionalLetters)) {
             $0.0.setTitle($0.1, forState: .Normal)
