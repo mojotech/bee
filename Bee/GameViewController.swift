@@ -19,13 +19,6 @@ class GameViewController: UIViewController {
     @IBOutlet weak var backspaceButton: UIButton!
     @IBOutlet weak var submitButton: UIButton!
     
-    // Pass this in eventually
-    let demoPuzzle = Puzzle(
-        requiredLetter: "C",
-        optionalLetters: ["A","D","F","I","N","O"],
-        possiblePoints: 24
-        )
-    
     var foundAnswers = [String]() {
         didSet {
             score = scoreWords(foundAnswers)
@@ -33,9 +26,21 @@ class GameViewController: UIViewController {
         }
     }
     
+    var puzzle :Puzzle! {
+        didSet {
+            map(zip(optionalLetterButtons, demoPuzzle.optionalLetters)) {
+                $0.0.setTitle($0.1, forState: .Normal)
+            }
+            requiredLetterButton.setTitle(demoPuzzle.requiredLetter, forState: UIControlState.Normal)
+            clearCurrentAnswer()
+            foundAnswers = []
+            score = 0
+        }
+    }
+    
     var score = Int() {
         didSet {
-            scoreLabel.text = "\(score)/\(demoPuzzle.possiblePoints)"
+            scoreLabel.text = "\(score)/\(puzzle.possiblePoints)"
         }
     }
     
@@ -53,16 +58,8 @@ class GameViewController: UIViewController {
         styleLetterButton(requiredLetterButton)
         styleLetterButton(backspaceButton)
         styleLetterButton(submitButton)
-                
-        map(zip(optionalLetterButtons, demoPuzzle.optionalLetters)) {
-            $0.0.setTitle($0.1, forState: .Normal)
-        }
-
-        requiredLetterButton.setTitle(demoPuzzle.requiredLetter, forState: UIControlState.Normal)
         
-        clearCurrentAnswer()
-        clearFoundAnswers()
-        score = 0
+        puzzle = demoPuzzle
     }
     
     @IBAction func enterLetterButton(sender: UIButton) {
@@ -93,10 +90,6 @@ class GameViewController: UIViewController {
     
     func clearCurrentAnswer() {
         currentAnswer.text = ""
-    }
-    
-    func clearFoundAnswers() {
-        foundAnswerList.text = ""
     }
 }
 
