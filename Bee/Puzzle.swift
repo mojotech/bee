@@ -6,6 +6,11 @@
 //  Copyright (c) 2015 MojoTech. All rights reserved.
 //
 
+let demoPuzzle = Puzzle(
+    requiredLetter: "C",
+    optionalLetters: ["A","D","F","I","N","O"],
+    possiblePoints: 24
+)
 
 struct Puzzle {
     let requiredLetter :String
