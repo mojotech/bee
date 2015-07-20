@@ -7,36 +7,28 @@
 //
 
 
-class Puzzle {
+struct Puzzle {
     let requiredLetter :String
     let optionalLetters :[String]
-    let validWords :[String]
-    
-    init(requiredLetter: String, optionalLetters: [String], validWords: [String]) {
-        self.requiredLetter = requiredLetter
-        self.optionalLetters = optionalLetters
-        self.validWords = validWords
-    }
-    
-    class func scoreWord(word: String) -> Int {
-        return count(Array(Set(word))) == 7 ? 3 : 1
-    }
-    
-    class func scoreWords(words: [String]) -> Int {
-        return words.reduce(0, combine: {$0 + scoreWord($1)})
-    }
-    
-    class func validWordLength(word: String) -> Bool {
-        return count(word) > 4
-    }
+    let possiblePoints :Int
     
     func validWord(word: String) -> Bool {
-        return contains(self.validWords, word)
-    }
-    
-    func possiblePoints() -> Int {
-        return Puzzle.scoreWords(validWords)
+        var playedLetters = Set(map(word.unicodeScalars) {String.init($0)})
+        if playedLetters.remove(requiredLetter) == nil {
+            return false
+        }
+        return validWordLength(word) && playedLetters.isSubsetOf(optionalLetters) && SharedDictionary?.containsWord(word) ?? false
     }
 }
 
+func scoreWord(word: String) -> Int {
+    return count(Array(Set(word))) == 7 ? 3 : 1
+}
 
+func scoreWords(words: [String]) -> Int {
+    return words.reduce(0, combine: {$0 + scoreWord($1)})
+}
+
+func validWordLength(word: String) -> Bool {
+    return count(word) > 4
+}

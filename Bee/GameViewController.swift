@@ -21,42 +21,19 @@ class GameViewController: UIViewController {
     let demoPuzzle = Puzzle(
         requiredLetter: "C",
         optionalLetters: ["A","D","F","I","N","O"],
-        validWords: [
-            "ACAIA",
-            "ACIDIC",
-            "ANACONDA",
-            "CANCAN",
-            "CANDID",
-            "CANID",
-            "CANNON",
-            "CANON",
-            "CICADA",
-            "COCOA",
-            "COCOON",
-            "CODON",
-            "COFFIN",
-            "CONDO",
-            "CONIC",
-            "FOCACCIA",
-            "ICONIC",
-            "INDICIA",
-            "IONIC",
-            "NIACIN",
-            "NONACID",
-            "NONACIDIC",
-            "AFICIONADO"
-        ])
+        possiblePoints: 24
+        )
     
     var foundAnswers = [String]() {
         didSet {
-            score = Puzzle.scoreWords(foundAnswers)
+            score = scoreWords(foundAnswers)
             foundAnswerList.text = "\n".join(foundAnswers)
         }
     }
     
     var score = Int() {
         didSet {
-            scoreLabel.text = "\(score)/\(demoPuzzle.possiblePoints())"
+            scoreLabel.text = "\(score)/\(demoPuzzle.possiblePoints)"
         }
     }
     
@@ -97,7 +74,6 @@ class GameViewController: UIViewController {
     
     func validAnswer(answer: String) -> Bool {
         return (!contains(foundAnswers, answer) &&
-                Puzzle.validWordLength(answer) &&
                 demoPuzzle.validWord(answer))
     }
     
