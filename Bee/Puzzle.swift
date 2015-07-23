@@ -12,12 +12,18 @@ let demoPuzzle = Puzzle(
     possiblePoints: 24
 )
 
-struct Puzzle {
-    let requiredLetter :String
-    let optionalLetters :[String]
-    let possiblePoints :Int
+public struct Puzzle {
+    public let requiredLetter :String
+    public let optionalLetters :[String]
+    public let possiblePoints :Int
     
-    func validWord(word: String) -> Bool {
+    public init(requiredLetter: String, optionalLetters: [String], possiblePoints: Int){
+        self.requiredLetter = requiredLetter
+        self.optionalLetters = optionalLetters
+        self.possiblePoints = possiblePoints
+    }
+    
+    public func validWord(word: String) -> Bool {
         var playedLetters = Set(map(word.unicodeScalars) {String.init($0)})
         if playedLetters.remove(requiredLetter) == nil {
             return false
@@ -26,14 +32,14 @@ struct Puzzle {
     }
 }
 
-func scoreWord(word: String) -> Int {
+public func scoreWord(word: String) -> Int {
     return count(Array(Set(word))) == 7 ? 3 : 1
 }
 
-func scoreWords(words: [String]) -> Int {
+public func scoreWords(words: [String]) -> Int {
     return words.reduce(0, combine: {$0 + scoreWord($1)})
 }
 
-func validWordLength(word: String) -> Bool {
+public func validWordLength(word: String) -> Bool {
     return count(word) > 4
 }
