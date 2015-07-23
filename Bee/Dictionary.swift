@@ -27,12 +27,3 @@ struct WordDictionary {
         return words.contains(word)
     }
 }
-
-var SharedDictionary :WordDictionary?
-
-class DictionaryProxy :NSObject {
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        SharedDictionary = WordDictionary(wordListURL: NSBundle.mainBundle().URLForResource("words", withExtension: "txt")!)
-    }
-}

@@ -1,52 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Rj2-Ca-Kyv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="FRp-16-vXe">
-            <objects>
-                <viewController id="Rj2-Ca-Kyv" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="ATb-oh-FLi"/>
-                        <viewControllerLayoutGuide type="bottom" id="xau-N8-rXo"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ogg-Rx-A6d">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kEa-NL-Xjs">
-                                <rect key="frame" x="262" y="159" width="76" height="30"/>
-                                <state key="normal" title="New Game">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="newGameSegue" modalTransitionStyle="crossDissolve" id="7hn-Mw-V5y"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bee" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lCh-1Y-mgj">
-                                <rect key="frame" x="269" y="36" width="52" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="centerX" secondItem="kEa-NL-Xjs" secondAttribute="centerX" id="87t-AH-nRl"/>
-                            <constraint firstAttribute="centerX" secondItem="lCh-1Y-mgj" secondAttribute="centerX" constant="5.5" id="Dp6-tx-oyq"/>
-                            <constraint firstItem="lCh-1Y-mgj" firstAttribute="top" secondItem="ATb-oh-FLi" secondAttribute="bottom" constant="16" id="v0b-fs-sim"/>
-                            <constraint firstAttribute="centerY" secondItem="kEa-NL-Xjs" secondAttribute="centerY" constant="126" id="yes-GX-wiE"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8HR-bg-Lg1" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <customObject id="KGg-cS-C6J" customClass="DictionaryProxy" customModule="Bee" customModuleProvider="target"/>
-            </objects>
-            <point key="canvasLocation" x="-304" y="462"/>
-        </scene>
         <!--Game View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -60,13 +18,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hth-fV-MKk">
-                                <rect key="frame" x="228" y="277" width="143.5" height="52.5"/>
+                                <rect key="frame" x="228" y="277" width="144" height="53"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="44"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fGh-bK-hvk">
-                                <rect key="frame" x="16" y="91" width="568" height="14.5"/>
+                                <rect key="frame" x="16" y="91" width="568" height="15"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -266,7 +224,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="394" y="462"/>
+            <point key="canvasLocation" x="54" y="361"/>
         </scene>
     </scenes>
 </document>
