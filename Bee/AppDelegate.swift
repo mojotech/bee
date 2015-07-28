@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 var SharedDictionary :WordDictionary?
 
@@ -18,6 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
         SharedDictionary = WordDictionary(wordListURL: NSBundle.mainBundle().URLForResource("words", withExtension: "txt")!)
+        
+        Parse.enableLocalDatastore()
+        Parse.setApplicationId(ParseAppID, clientKey: ParseAppKey)
         
         return true
     }
